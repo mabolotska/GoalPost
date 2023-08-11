@@ -8,7 +8,7 @@
 import UIKit
 import CoreData
 
-let appDelegate = UIApplication.shared.delegate as? AppDelegate
+
 
 class FinishGoalVC: UIViewController, UITextFieldDelegate {
     
