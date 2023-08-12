@@ -44,6 +44,16 @@ class FinishGoalVC: UIViewController, UITextFieldDelegate {
         }
     }
     
+    @IBAction func buttonBtnPressed(_ sender: Any) {
+        if pointTxtField.text != "" {
+            self.save { (complete) in
+                if complete {
+                    dismiss(animated: true, completion: nil)
+                }
+            }
+        }
+    }
+    
     func save(completion: (_ finished: Bool) -> ()) {
         guard let managedContext = appDelegate?.persistentContainer.viewContext else {return}
         let goal = Goal(context: managedContext)
